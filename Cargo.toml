@@ -1,0 +1,26 @@
+[workspace]
+
+members = [
+#    "tools/harvester",
+    "pac/*",
+]
+
+default-members = [
+    "pac/*"
+]
+
+exclude = [
+    "pac/templates"
+]
+
+[workspace.package]
+version = "0.28.0-alpha0"
+license = "MIT OR Apache-2.0"
+authors = ["Michal Fita <4925040+michalfita@users.noreply.github.com>"]
+categories = ["no-std", "embedded", "hardware-support"]
+keywords = ["no-std", "arm", "cortex-m", "atsam", "pac"]
+repository = "https://github.com/atsams-rs/atsamx7x-rust"
+edition = "2021"
+rust-version = "1.63.0"
+
+[workspace.dependencies]

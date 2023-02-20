@@ -1,0 +1,6 @@
+[tasks.svd]
+run_task = "svd-${1}"
+
+[tasks.svd-update]
+command = "echo"
+args = ["run", "harvester"]
