@@ -21,3 +21,6 @@ tools/pacs.py
 <!-- TODO: Describe how to test it with board examples -->
 
 ## Publication / Release
+```sh
+for p in `ls -d pac/at*` ; do cargo publish -p ${p##*/} ; done
+```
