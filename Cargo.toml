@@ -14,7 +14,7 @@ exclude = [
 ]
 
 [workspace.package]
-version = "0.28.0-alpha1"
+version = "0.28.0-alpha2"
 license = "MIT OR Apache-2.0"
 authors = ["Michal Fita <4925040+michalfita@users.noreply.github.com>"]
 categories = ["no-std", "embedded", "hardware-support"]

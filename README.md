@@ -25,6 +25,9 @@ and build the examples:
 ## Flashing the device
 Refer to the [SAM V71 Xplained Ultra README](boards/atsamv71_xult/README.md).
 
+## Extra Documentation
+* [Development Guide](docs/development.md)
+
 # License
 
 All source code in this repository is licensed under either of

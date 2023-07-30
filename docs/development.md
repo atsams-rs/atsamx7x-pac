@@ -22,5 +22,5 @@ tools/pacs.py
 
 ## Publication / Release
 ```sh
-for p in `ls -d pac/at*` ; do cargo publish -p ${p##*/} ; done
+for p in `ls -d pac/at*` ; do cargo publish -p ${p##*/} ; cargo clean -p ${p##*/} ; done
 ```
