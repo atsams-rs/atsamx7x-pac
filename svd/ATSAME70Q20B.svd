@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2017 Microchip Technology Inc.
+Copyright (c) 2023 Microchip Technology Inc.
 
  SPDX-License-Identifier: Apache-2.0
 
@@ -17,8 +17,8 @@ Copyright (c) 2017 Microchip Technology Inc.
  limitations under the License.
 -->
 <device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-        schemaVersion="1.1"
-        xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
+         schemaVersion="1.3"
+         xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
    <vendor>Microchip Technology</vendor>
    <vendorID>MCHP</vendorID>
    <name>ATSAME70Q20B</name>
@@ -31,8 +31,14 @@ Copyright (c) 2017 Microchip Technology Inc.
       <endian>little</endian>
       <mpuPresent>true</mpuPresent>
       <fpuPresent>true</fpuPresent>
+      <fpuDP>true</fpuDP>
+      <icachePresent>true</icachePresent>
+      <dcachePresent>true</dcachePresent>
+      <itcmPresent>true</itcmPresent>
+      <dtcmPresent>true</dtcmPresent>
       <nvicPrioBits>3</nvicPrioBits>
       <vendorSystickConfig>false</vendorSystickConfig>
+      <deviceNumInterrupts>74</deviceNumInterrupts>
    </cpu>
    <addressUnitBits>8</addressUnitBits>
    <width>32</width>
@@ -45,8 +51,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>ACC</name>
          <version>6490J</version>
          <description>Analog Comparator Controller</description>
-         <groupName>ACC</groupName>
-         <prependToName>ACC_</prependToName>
          <baseAddress>0x40044000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -433,8 +437,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>AES</name>
          <version>6149W</version>
          <description>Advanced Encryption Standard</description>
-         <groupName>AES</groupName>
-         <prependToName>AES_</prependToName>
          <baseAddress>0x4006C000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -2818,8 +2820,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>CHIPID</name>
          <version>6417ZK</version>
          <description>Chip Identifier</description>
-         <groupName>CHIPID</groupName>
-         <prependToName>CHIPID_</prependToName>
          <baseAddress>0x400E0940</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -3193,8 +3193,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>DACC</name>
          <version>11246E</version>
          <description>Digital-to-Analog Converter Controller</description>
-         <groupName>DACC</groupName>
-         <prependToName>DACC_</prependToName>
          <baseAddress>0x40040000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -3844,8 +3842,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>EFC</name>
          <version>6450Y</version>
          <description>Embedded Flash Controller</description>
-         <groupName>EFC</groupName>
-         <prependToName>EFC_</prependToName>
          <baseAddress>0x400E0C00</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -4138,8 +4134,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>GMAC</name>
          <version>11046S</version>
          <description>Gigabit Ethernet MAC</description>
-         <groupName>GMAC</groupName>
-         <prependToName>GMAC_</prependToName>
          <baseAddress>0x40050000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -7338,8 +7332,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>GPBR</name>
          <version>6378J</version>
          <description>General Purpose Backup Registers</description>
-         <groupName>GPBR</groupName>
-         <prependToName>GPBR_</prependToName>
          <baseAddress>0x400E1890</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -7369,8 +7361,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>HSMCI</name>
          <version>6449R</version>
          <description>High Speed MultiMedia Card Interface</description>
-         <groupName>HSMCI</groupName>
-         <prependToName>HSMCI_</prependToName>
          <baseAddress>0x40000000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -9273,8 +9263,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>ICM</name>
          <version>11105H</version>
          <description>Integrity Check Monitor</description>
-         <groupName>ICM</groupName>
-         <prependToName>ICM_</prependToName>
          <baseAddress>0x40048000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -9730,8 +9718,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>ISI</name>
          <version>6350K</version>
          <description>Image Sensor Interface</description>
-         <groupName>ISI</groupName>
-         <prependToName>ISI_</prependToName>
          <baseAddress>0x4004C000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -10684,8 +10670,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>MATRIX</name>
          <version>11282L</version>
          <description>AHB Bus Matrix</description>
-         <groupName>MATRIX</groupName>
-         <prependToName>MATRIX_</prependToName>
          <baseAddress>0x40088000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -24853,8 +24837,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>PMC</name>
          <version>44006P</version>
          <description>Power Management Controller</description>
-         <groupName>PMC</groupName>
-         <prependToName>PMC_</prependToName>
          <baseAddress>0x400E0600</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -31290,8 +31272,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>QSPI</name>
          <version>11171J</version>
          <description>Quad Serial Peripheral Interface</description>
-         <groupName>QSPI</groupName>
-         <prependToName>QSPI_</prependToName>
          <baseAddress>0x4007C000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -32043,8 +32023,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>RSTC</name>
          <version>11009N</version>
          <description>Reset Controller</description>
-         <groupName>RSTC</groupName>
-         <prependToName>RSTC_</prependToName>
          <baseAddress>0x400E1800</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -32198,8 +32176,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>RSWDT</name>
          <version>11110G</version>
          <description>Reinforced Safety Watchdog Timer</description>
-         <groupName>RSWDT</groupName>
-         <prependToName>RSWDT_</prependToName>
          <baseAddress>0x400E1900</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -32311,8 +32287,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>RTC</name>
          <version>6056ZB</version>
          <description>Real-time Clock</description>
-         <groupName>RTC</groupName>
-         <prependToName>RTC_</prependToName>
          <baseAddress>0x400E1860</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -33105,8 +33079,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>RTT</name>
          <version>6081M</version>
          <description>Real-time Timer</description>
-         <groupName>RTT</groupName>
-         <prependToName>RTT_</prependToName>
          <baseAddress>0x400E1830</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -33218,8 +33190,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>SMC</name>
          <version>6498J</version>
          <description>Static Memory Controller</description>
-         <groupName>SMC</groupName>
-         <prependToName>SMC_</prependToName>
          <baseAddress>0x40080000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -34190,8 +34160,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>SSC</name>
          <version>6078Q</version>
          <description>Synchronous Serial Controller</description>
-         <groupName>SSC</groupName>
-         <prependToName>SSC_</prependToName>
          <baseAddress>0x40004000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -35153,8 +35121,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>SUPC</name>
          <version>6452ZE</version>
          <description>Supply Controller</description>
-         <groupName>SUPC</groupName>
-         <prependToName>SUPC_</prependToName>
          <baseAddress>0x400E1810</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -38184,8 +38150,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>TRNG</name>
          <version>6334G</version>
          <description>True Random Number Generator</description>
-         <groupName>TRNG</groupName>
-         <prependToName>TRNG_</prependToName>
          <baseAddress>0x40070000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -42590,8 +42554,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>USBHS</name>
          <version>11292G</version>
          <description>USB High-Speed Interface</description>
-         <groupName>USBHS</groupName>
-         <prependToName>USBHS_</prependToName>
          <baseAddress>0x40038000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -50091,8 +50053,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>UTMI</name>
          <version>11300A</version>
          <description>USB Transmitter Interface Macrocell</description>
-         <groupName>UTMI</groupName>
-         <prependToName>UTMI_</prependToName>
          <baseAddress>0x400E0400</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -50164,8 +50124,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>WDT</name>
          <version>6080N</version>
          <description>Watchdog Timer</description>
-         <groupName>WDT</groupName>
-         <prependToName>WDT_</prependToName>
          <baseAddress>0x400E1850</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -50283,8 +50241,6 @@ Copyright (c) 2017 Microchip Technology Inc.
          <name>XDMAC</name>
          <version>11161K</version>
          <description>Extensible DMA Controller</description>
-         <groupName>XDMAC</groupName>
-         <prependToName>XDMAC_</prependToName>
          <baseAddress>0x40078000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -53559,8 +53515,7 @@ Copyright (c) 2017 Microchip Technology Inc.
       </peripheral>
       <peripheral>
          <name>LOCKBIT</name>
-         <groupName>LOCKBIT</groupName>
-         <prependToName>LOCKBIT_</prependToName>
+         <version>11</version>
          <baseAddress>0</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -53973,8 +53928,6 @@ Copyright (c) 2017 Microchip Technology Inc.
       <peripheral>
          <name>SCnSCB</name>
          <description>System control not in SCB</description>
-         <groupName>SCnSCB</groupName>
-         <prependToName>SCnSCB_</prependToName>
          <baseAddress>0xE000E000</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -54079,8 +54032,6 @@ Copyright (c) 2017 Microchip Technology Inc.
       <peripheral>
          <name>SCB</name>
          <description>System Control Block</description>
-         <groupName>SCB</groupName>
-         <prependToName>SCB_</prependToName>
          <baseAddress>0xE000ED00</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -55774,8 +55725,6 @@ Copyright (c) 2017 Microchip Technology Inc.
       <peripheral>
          <name>SysTick</name>
          <description>System timer</description>
-         <groupName>SysTick</groupName>
-         <prependToName>SysTick_</prependToName>
          <baseAddress>0xE000E010</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -55944,8 +55893,6 @@ Copyright (c) 2017 Microchip Technology Inc.
       <peripheral>
          <name>NVIC</name>
          <description>Nested Vectored Interrupt Controller</description>
-         <groupName>NVIC</groupName>
-         <prependToName>NVIC_</prependToName>
          <baseAddress>0xE000E100</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -56076,8 +56023,6 @@ Copyright (c) 2017 Microchip Technology Inc.
       <peripheral>
          <name>MPU</name>
          <description>Memory Protection Unit</description>
-         <groupName>MPU</groupName>
-         <prependToName>MPU_</prependToName>
          <baseAddress>0xE000ED90</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -56282,8 +56227,6 @@ Copyright (c) 2017 Microchip Technology Inc.
       <peripheral>
          <name>FPU</name>
          <description>Floating Point Unit</description>
-         <groupName>FPU</groupName>
-         <prependToName>FPU_</prependToName>
          <baseAddress>0xE000EF30</baseAddress>
          <addressBlock>
             <offset>0</offset>
@@ -56512,6 +56455,2152 @@ Copyright (c) 2017 Microchip Technology Inc.
                   <field>
                      <name>VFP_Misc</name>
                      <description>Indicates the hardware support for FP miscellaneous features</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>ITM</name>
+         <description>Instrumentation Trace Macrocell</description>
+         <baseAddress>0xE0000000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0xE84</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <dim>32</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>PORT_BYTE_MODE[%s]</name>
+               <description>ITM Stimulus Port Registers</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <fields>
+                  <field>
+                     <name>PORT</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>32</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>PORT_HWORD_MODE[%s]</name>
+               <description>ITM Stimulus Port Registers</description>
+               <alternateRegister>PORT_BYTE_MODE[%s]</alternateRegister>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <fields>
+                  <field>
+                     <name>PORT</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>32</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>PORT_WORD_MODE[%s]</name>
+               <description>ITM Stimulus Port Registers</description>
+               <alternateRegister>PORT_BYTE_MODE[%s]</alternateRegister>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <fields>
+                  <field>
+                     <name>PORT</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>TER</name>
+               <description>ITM Trace Enable Register</description>
+               <addressOffset>0xE00</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>TPR</name>
+               <description>ITM Trace Privilege Register</description>
+               <addressOffset>0xE40</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>PRIVMASK</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>TCR</name>
+               <description>ITM Trace Control Register</description>
+               <addressOffset>0xE80</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>ITMENA</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TSENA</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SYNCENA</name>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DWTENA</name>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SWOENA</name>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>STALLENA</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TSPrescale</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>GTSFREQ</name>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>TraceBusID</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>7</bitWidth>
+                  </field>
+                  <field>
+                     <name>BUSY</name>
+                     <bitOffset>23</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>DWT</name>
+         <description>Data Watchpoint and Trace Register</description>
+         <baseAddress>0xE0001000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x1000</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>CTRL</name>
+               <description>Control Register</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>CYCCNTENA</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>POSTPRESET</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>POSTINIT</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>CYCTAP</name>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SYNCTAP</name>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>PCSAMPLENA</name>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXCTRCENA</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CPIEVTENA</name>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXCEVTENA</name>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SLEEPEVTENA</name>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LSUEVTENA</name>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FOLDEVTENA</name>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CYCEVTENA</name>
+                     <bitOffset>22</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NOPRFCNT</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NOCYCCNT</name>
+                     <bitOffset>25</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NOEXTTRIG</name>
+                     <bitOffset>26</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NOTRCPKT</name>
+                     <bitOffset>27</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NUMCOMP</name>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CYCCNT</name>
+               <description>Cycle Count Register</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>CPICNT</name>
+               <description>CPI Count Register</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>CPICNT</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>EXCCNT</name>
+               <description>Exception Overhead Count Register</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>EXCCNT</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SLEEPCNT</name>
+               <description>Sleep Count Register</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>SLEEPCNT</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>LSUCNT</name>
+               <description>LSU Count Register</description>
+               <addressOffset>0x14</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>LSUCNT</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FOLDCNT</name>
+               <description>Folded-instruction Count Register</description>
+               <addressOffset>0x18</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>FOLDCNT</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PCSR</name>
+               <description>Program Counter Sample Register</description>
+               <addressOffset>0x1C</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+            </register>
+            <register>
+               <name>COMP0</name>
+               <description>Comparator Register 0</description>
+               <addressOffset>0x20</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>MASK0</name>
+               <description>Mask Register 0</description>
+               <addressOffset>0x24</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>MASK</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>5</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FUNCTION0</name>
+               <description>Function Register 0</description>
+               <addressOffset>0x28</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>FUNCTION</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>EMITRANGE</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CYCMATCH</name>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVMATCH</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LNK1ENA</name>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVSIZE</name>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVADDR0</name>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVADDR1</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>MATCHED</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>COMP1</name>
+               <description>Comparator Register 1</description>
+               <addressOffset>0x30</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>MASK1</name>
+               <description>Mask Register 1</description>
+               <addressOffset>0x34</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>MASK</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>5</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FUNCTION1</name>
+               <description>Function Register 1</description>
+               <addressOffset>0x38</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>FUNCTION</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>EMITRANGE</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CYCMATCH</name>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVMATCH</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LNK1ENA</name>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVSIZE</name>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVADDR0</name>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVADDR1</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>MATCHED</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>COMP2</name>
+               <description>Comparator Register 2</description>
+               <addressOffset>0x40</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>MASK2</name>
+               <description>Mask Register 2</description>
+               <addressOffset>0x44</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>MASK</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>5</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FUNCTION2</name>
+               <description>Function Register 2</description>
+               <addressOffset>0x48</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>FUNCTION</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>EMITRANGE</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CYCMATCH</name>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVMATCH</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LNK1ENA</name>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVSIZE</name>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVADDR0</name>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVADDR1</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>MATCHED</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>COMP3</name>
+               <description>Comparator Register 3</description>
+               <addressOffset>0x50</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>MASK3</name>
+               <description>Mask Register 3</description>
+               <addressOffset>0x54</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>MASK</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>5</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FUNCTION3</name>
+               <description>Function Register 3</description>
+               <addressOffset>0x58</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>FUNCTION</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>EMITRANGE</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CYCMATCH</name>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVMATCH</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LNK1ENA</name>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVSIZE</name>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVADDR0</name>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>DATAVADDR1</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>MATCHED</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>LAR</name>
+               <description>DWT Software Lock Access Register</description>
+               <addressOffset>0xFB0</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <fields>
+                  <field>
+                     <name>KEY</name>
+                     <description>Lock access control</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                     <enumeratedValues>
+                        <name>KEYSelect</name>
+                        <enumeratedValue>
+                           <name>UNLOCK</name>
+                           <description>Unlock key value</description>
+                           <value>0xC5ACCE55</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>LSR</name>
+               <description>DWT Software Lock Status Register</description>
+               <addressOffset>0xFB4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>SLI</name>
+                     <description>Software Lock implemented</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SLK</name>
+                     <description>Software Lock status</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>nTT</name>
+                     <description>Not thirty-two bit</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PID4</name>
+               <description>DWT Peripheral Identification Register 4</description>
+               <addressOffset>0xFD0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000004</resetValue>
+               <fields>
+                  <field>
+                     <name>DES_2</name>
+                     <description>JEP106 continuation code</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>SIZE</name>
+                     <description>4KB count</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PID5</name>
+               <description>DWT Peripheral Identification Register 5</description>
+               <addressOffset>0xFD4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>PID6</name>
+               <description>DWT Peripheral Identification Register 6</description>
+               <addressOffset>0xFD8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>PID7</name>
+               <description>DWT Peripheral Identification Register 7</description>
+               <addressOffset>0xFDC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>PID0</name>
+               <description>DWT Peripheral Identification Register 0</description>
+               <addressOffset>0xFE0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000002</resetValue>
+               <fields>
+                  <field>
+                     <name>PART_0</name>
+                     <description>Part number bits[7:0]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PID1</name>
+               <description>DWT Peripheral Identification Register 1</description>
+               <addressOffset>0xFE4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x000000B0</resetValue>
+               <fields>
+                  <field>
+                     <name>PART_1</name>
+                     <description>Part number bits[11:8]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>DES_0</name>
+                     <description>JEP106 identification code bits [3:0]</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PID2</name>
+               <description>DWT Peripheral Identification Register 2</description>
+               <addressOffset>0xFE8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x0000000B</resetValue>
+               <fields>
+                  <field>
+                     <name>DES_1</name>
+                     <description>JEP106 identification code bits[6:4]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>JEDEC</name>
+                     <description>JEDEC assignee value is used</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>REVISION</name>
+                     <description>Component revision</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PID3</name>
+               <description>DWT Peripheral Identification Register 3</description>
+               <addressOffset>0xFEC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CMOD</name>
+                     <description>Customer Modified</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>REVAND</name>
+                     <description>RevAnd</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CID0</name>
+               <description>DWT Component Identification Register 0</description>
+               <addressOffset>0xFF0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x0000000D</resetValue>
+               <fields>
+                  <field>
+                     <name>PRMBL_0</name>
+                     <description>CoreSight component identification preamble</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CID1</name>
+               <description>DWT Component Identification Register 1</description>
+               <addressOffset>0xFF4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x000000E0</resetValue>
+               <fields>
+                  <field>
+                     <name>PRMBL_1</name>
+                     <description>CoreSight component identification preamble</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>CLASS</name>
+                     <description>CoreSight component class</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CID2</name>
+               <description>DWT Component Identification Register 2</description>
+               <addressOffset>0xFF8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000005</resetValue>
+               <fields>
+                  <field>
+                     <name>PRMBL_2</name>
+                     <description>CoreSight component identification preamble</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CID3</name>
+               <description>DWT Component Identification Register 3</description>
+               <addressOffset>0xFFC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x000000B1</resetValue>
+               <fields>
+                  <field>
+                     <name>PRMBL_3</name>
+                     <description>CoreSight component identification preamble</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>FPB</name>
+         <description>Flash Patch and Breakpoint</description>
+         <baseAddress>0xE0002000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x1000</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>FP_CTRL</name>
+               <description>Flash Patch Control Register</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x10000000</resetValue>
+               <fields>
+                  <field>
+                     <name>ENABLE</name>
+                     <description>Flash Patch global enable</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>KEY</name>
+                     <description>FP_CTRL write-enable key</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NUM_CODE</name>
+                     <description>Number of implemented code comparators bits [3:0]</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>NUM_LIT</name>
+                     <description>Number of literal comparators</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>NUM_CODE_1</name>
+                     <description>Number of implemented code comparators bits [6:4]</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>REV</name>
+                     <description>Revision</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_REMAP</name>
+               <description>Flash Patch Remap Register</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>REMAP</name>
+                     <description>Remap address</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>24</bitWidth>
+                  </field>
+                  <field>
+                     <name>RMPSPT</name>
+                     <description>Remap supported</description>
+                     <bitOffset>29</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>8</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>FP_COMP[%s]</name>
+               <description>Flash Patch Comparator Register n</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>BE</name>
+                     <description>Breakpoint enable</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FPADDR</name>
+                     <description>Flash Patch address</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>27</bitWidth>
+                  </field>
+                  <field>
+                     <name>FE</name>
+                     <description>Flash Patch enable</description>
+                     <bitOffset>31</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>8</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>FP_COMP_BREAKPOINT_MODE[%s]</name>
+               <description>Flash Patch Comparator Register n</description>
+               <alternateRegister>FP_COMP[%s]</alternateRegister>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>BE</name>
+                     <description>Breakpoint enable</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>BPADDR</name>
+                     <description>Breakpoint address</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>31</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_LAR</name>
+               <description>FPB Software Lock Access Register</description>
+               <addressOffset>0xFB0</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <fields>
+                  <field>
+                     <name>KEY</name>
+                     <description>Lock access control</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                     <enumeratedValues>
+                        <name>KEYSelect</name>
+                        <enumeratedValue>
+                           <name>UNLOCK</name>
+                           <description>Unlock key value</description>
+                           <value>0xC5ACCE55</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_LSR</name>
+               <description>FPB Software Lock Status Register</description>
+               <addressOffset>0xFB4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>SLI</name>
+                     <description>Software Lock implemented</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SLK</name>
+                     <description>Software Lock status</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>nTT</name>
+                     <description>Not thirty-two bit</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_PID4</name>
+               <description>FP Peripheral Identification Register 4</description>
+               <addressOffset>0xFD0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000004</resetValue>
+               <fields>
+                  <field>
+                     <name>DES_2</name>
+                     <description>JEP106 continuation code</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>SIZE</name>
+                     <description>4KB count</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_PID5</name>
+               <description>FP Peripheral Identification Register 5</description>
+               <addressOffset>0xFD4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>FP_PID6</name>
+               <description>FP Peripheral Identification Register 6</description>
+               <addressOffset>0xFD8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>FP_PID7</name>
+               <description>FP Peripheral Identification Register 7</description>
+               <addressOffset>0xFDC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>FP_PID0</name>
+               <description>FP Peripheral Identification Register 0</description>
+               <addressOffset>0xFE0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>PART_0</name>
+                     <description>Part number bits[7:0]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_PID1</name>
+               <description>FP Peripheral Identification Register 1</description>
+               <addressOffset>0xFE4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x000000B0</resetValue>
+               <fields>
+                  <field>
+                     <name>PART_1</name>
+                     <description>Part number bits[11:8]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>DES_0</name>
+                     <description>JEP106 identification code bits [3:0]</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_PID2</name>
+               <description>FP Peripheral Identification Register 2</description>
+               <addressOffset>0xFE8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x0000002B</resetValue>
+               <fields>
+                  <field>
+                     <name>DES_1</name>
+                     <description>JEP106 identification code bits[6:4]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>JEDEC</name>
+                     <description>JEDEC assignee value is used</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>REVISION</name>
+                     <description>Component revision</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_PID3</name>
+               <description>FP Peripheral Identification Register 3</description>
+               <addressOffset>0xFEC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CMOD</name>
+                     <description>Customer Modified</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>REVAND</name>
+                     <description>RevAnd</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_CID0</name>
+               <description>FP Component Identification Register 0</description>
+               <addressOffset>0xFF0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x0000000D</resetValue>
+               <fields>
+                  <field>
+                     <name>PRMBL_0</name>
+                     <description>CoreSight component identification preamble</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_CID1</name>
+               <description>FP Component Identification Register 1</description>
+               <addressOffset>0xFF4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x000000E0</resetValue>
+               <fields>
+                  <field>
+                     <name>PRMBL_1</name>
+                     <description>CoreSight component identification preamble</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>CLASS</name>
+                     <description>CoreSight component class</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_CID2</name>
+               <description>FP Component Identification Register 2</description>
+               <addressOffset>0xFF8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000005</resetValue>
+               <fields>
+                  <field>
+                     <name>PRMBL_2</name>
+                     <description>CoreSight component identification preamble</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FP_CID3</name>
+               <description>FP Component Identification Register 3</description>
+               <addressOffset>0xFFC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x000000B1</resetValue>
+               <fields>
+                  <field>
+                     <name>PRMBL_3</name>
+                     <description>CoreSight component identification preamble</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>CoreDebug</name>
+         <description>Core Debug Register</description>
+         <baseAddress>0xE000EDF0</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x100</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>DHCSR</name>
+               <description>Debug Halting Control and Status Register</description>
+               <addressOffset>0xF0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>C_DEBUGEN</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>C_HALT</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>C_STEP</name>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>C_MASKINTS</name>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>C_SNAPSTALL</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>S_REGRDY</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>S_HALT</name>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>S_SLEEP</name>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>S_LOCKUP</name>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>S_RETIRE_ST</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>S_RESET_ST</name>
+                     <bitOffset>25</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>DCRSR</name>
+               <description>Debug Core Register Selector Register</description>
+               <addressOffset>0xF4</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <fields>
+                  <field>
+                     <name>REGSEL</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>5</bitWidth>
+                  </field>
+                  <field>
+                     <name>REGWnR</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>DCRDR</name>
+               <description>Debug Core Register Data Register</description>
+               <addressOffset>0xF8</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>DEMCR</name>
+               <description>Debug Exception and Monitor Control Register</description>
+               <addressOffset>0xFC</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>VC_CORERESET</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>VC_MMERR</name>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>VC_NOCPERR</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>VC_CHKERR</name>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>VC_STATERR</name>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>VC_BUSERR</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>VC_INTERR</name>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>VC_HARDERR</name>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MON_EN</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MON_PEND</name>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MON_STEP</name>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MON_REQ</name>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TRCENA</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>ETM</name>
+         <description>Embedded Trace Macrocell</description>
+         <baseAddress>0xE0041000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x1000</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>CR</name>
+               <description>ETM Main Control Register</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000411</resetValue>
+               <fields>
+                  <field>
+                     <name>ETMPD</name>
+                     <description>ETM Power Down</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PORTSIZE</name>
+                     <description>Port Size bits 2:0</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>STALL</name>
+                     <description>Stall Processor</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>BROUT</name>
+                     <description>Branch Output</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DBGRQ</name>
+                     <description>Debug Request Control</description>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PROG</name>
+                     <description>ETM Programming</description>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PORTSEL</name>
+                     <description>ETM Port Select</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PORTMODE2</name>
+                     <description>Port Mode bit 2</description>
+                     <bitOffset>13</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PORTMODE</name>
+                     <description>Port Mode bits 1:0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>PORTSIZE3</name>
+                     <description>Port Size bit 3</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TSEN</name>
+                     <description>TimeStamp Enable</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CCR</name>
+               <description>ETM Configuration Code Register</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x8C802000</resetValue>
+            </register>
+            <register>
+               <name>TRIGGER</name>
+               <description>ETM Trigger Event Register</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>SR</name>
+               <description>ETM Status Register</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>SCR</name>
+               <description>ETM System Configuration Register</description>
+               <addressOffset>0x14</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00020D09</resetValue>
+            </register>
+            <register>
+               <name>TEEVR</name>
+               <description>ETM TraceEnable Event Register</description>
+               <addressOffset>0x20</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>TECR1</name>
+               <description>ETM TraceEnable Control 1 Register</description>
+               <addressOffset>0x24</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>FFLR</name>
+               <description>ETM FIFO Full Level Register</description>
+               <addressOffset>0x28</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>CNTRLDVR1</name>
+               <description>ETM Free-running Counter Reload Value</description>
+               <addressOffset>0x140</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>SYNCFR</name>
+               <description>ETM Synchronization Frequency Register</description>
+               <addressOffset>0x1E0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000400</resetValue>
+            </register>
+            <register>
+               <name>IDR</name>
+               <description>ETM ID Register</description>
+               <addressOffset>0x1E4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x4114F250</resetValue>
+            </register>
+            <register>
+               <name>CCER</name>
+               <description>ETM Configuration Code Extension Register</description>
+               <addressOffset>0x1E8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x18541800</resetValue>
+            </register>
+            <register>
+               <name>TESSEICR</name>
+               <description>ETM TraceEnable Start/Stop EmbeddedICE Control Register</description>
+               <addressOffset>0x1F0</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>TSEVT</name>
+               <description>ETM TimeStamp Event Register</description>
+               <addressOffset>0x1F8</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>TRACEIDR</name>
+               <description>ETM CoreSight Trace ID Register</description>
+               <addressOffset>0x200</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>IDR2</name>
+               <description>ETM ID Register 2</description>
+               <addressOffset>0x208</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>PDSR</name>
+               <description>ETM Device Power-Down Status Register</description>
+               <addressOffset>0x314</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000001</resetValue>
+            </register>
+            <register>
+               <name>ITMISCIN</name>
+               <description>ETM Integration Test Miscellaneous Inputs</description>
+               <addressOffset>0xEE0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+            </register>
+            <register>
+               <name>ITTRIGOUT</name>
+               <description>ETM Integration Test Trigger Out</description>
+               <addressOffset>0xEE8</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+            </register>
+            <register>
+               <name>ITATBCTR2</name>
+               <description>ETM Integration Test ATB Control 2</description>
+               <addressOffset>0xEF0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+            </register>
+            <register>
+               <name>ITATBCTR0</name>
+               <description>ETM Integration Test ATB Control 0</description>
+               <addressOffset>0xEF8</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+            </register>
+            <register>
+               <name>ITCTRL</name>
+               <description>ETM Integration Mode Control Register</description>
+               <addressOffset>0xF00</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>INTEGRATION</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CLAIMSET</name>
+               <description>ETM Claim Tag Set Register</description>
+               <addressOffset>0xFA0</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>CLAIMCLR</name>
+               <description>ETM Claim Tag Clear Register</description>
+               <addressOffset>0xFA4</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>LAR</name>
+               <description>ETM Lock Access Register</description>
+               <addressOffset>0xFB0</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+            </register>
+            <register>
+               <name>LSR</name>
+               <description>ETM Lock Status Register</description>
+               <addressOffset>0xFB4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>Present</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>Access</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ByteAcc</name>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>AUTHSTATUS</name>
+               <description>ETM Authentication Status Register</description>
+               <addressOffset>0xFB8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+            </register>
+            <register>
+               <name>DEVTYPE</name>
+               <description>ETM CoreSight Device Type Register</description>
+               <addressOffset>0xFCC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000013</resetValue>
+            </register>
+            <register>
+               <name>PIDR4</name>
+               <description>ETM Peripheral Identification Register #4</description>
+               <addressOffset>0xFD0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000004</resetValue>
+            </register>
+            <register>
+               <name>PIDR5</name>
+               <description>ETM Peripheral Identification Register #5</description>
+               <addressOffset>0xFD4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>PIDR6</name>
+               <description>ETM Peripheral Identification Register #6</description>
+               <addressOffset>0xFD8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>PIDR7</name>
+               <description>ETM Peripheral Identification Register #7</description>
+               <addressOffset>0xFDC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>PIDR0</name>
+               <description>ETM Peripheral Identification Register #0</description>
+               <addressOffset>0xFE0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000025</resetValue>
+            </register>
+            <register>
+               <name>PIDR1</name>
+               <description>ETM Peripheral Identification Register #1</description>
+               <addressOffset>0xFE4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x000000B9</resetValue>
+            </register>
+            <register>
+               <name>PIDR2</name>
+               <description>ETM Peripheral Identification Register #2</description>
+               <addressOffset>0xFE8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x0000000B</resetValue>
+            </register>
+            <register>
+               <name>PIDR3</name>
+               <description>ETM Peripheral Identification Register #3</description>
+               <addressOffset>0xFEC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>CIDR0</name>
+               <description>ETM Component  Identification Register #0</description>
+               <addressOffset>0xFF0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x0000000D</resetValue>
+            </register>
+            <register>
+               <name>CIDR1</name>
+               <description>ETM Component  Identification Register #1</description>
+               <addressOffset>0xFF4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000090</resetValue>
+            </register>
+            <register>
+               <name>CIDR2</name>
+               <description>ETM Component  Identification Register #2</description>
+               <addressOffset>0xFF8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000005</resetValue>
+            </register>
+            <register>
+               <name>CIDR3</name>
+               <description>ETM Component  Identification Register #3</description>
+               <addressOffset>0xFFC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x000000B1</resetValue>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>TPIU</name>
+         <description>Trace Port Interface Register</description>
+         <baseAddress>0xE0040000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0xFD0</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>SSPSR</name>
+               <description>Supported Parallel Port Size Register</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+            </register>
+            <register>
+               <name>CSPSR</name>
+               <description>Current Parallel Port Size Register</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>ACPR</name>
+               <description>Asynchronous Clock Prescaler Register</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>PRESCALER</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>13</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SPPR</name>
+               <description>Selected Pin Protocol Register</description>
+               <addressOffset>0xF0</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>TXMODE</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FFSR</name>
+               <description>Formatter and Flush Status Register</description>
+               <addressOffset>0x300</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>FlInProg</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FtStopped</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TCPresent</name>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FtNonStop</name>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FFCR</name>
+               <description>Formatter and Flush Control Register</description>
+               <addressOffset>0x304</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>EnFCont</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TrigIn</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FSCR</name>
+               <description>Formatter Synchronization Counter Register</description>
+               <addressOffset>0x308</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+            </register>
+            <register>
+               <name>TRIGGER</name>
+               <description>TRIGGER</description>
+               <addressOffset>0xEE8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>TRIGGER</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FIFO0</name>
+               <description>Integration ETM Data</description>
+               <addressOffset>0xEEC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>ETM0</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>ETM1</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>ETM2</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>ETM_bytecount</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>ETM_ATVALID</name>
+                     <bitOffset>26</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ITM_bytecount</name>
+                     <bitOffset>27</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>ITM_ATVALID</name>
+                     <bitOffset>29</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ITATBCTR2</name>
+               <description>ITATBCTR2</description>
+               <addressOffset>0xEF0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>ATREADY</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ITATBCTR0</name>
+               <description>ITATBCTR0</description>
+               <addressOffset>0xEF8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>ATREADY</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FIFO1</name>
+               <description>Integration ITM Data</description>
+               <addressOffset>0xEFC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>ITM0</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>ITM1</name>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>ITM2</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>ETM_bytecount</name>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>ETM_ATVALID</name>
+                     <bitOffset>26</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ITM_bytecount</name>
+                     <bitOffset>27</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>ITM_ATVALID</name>
+                     <bitOffset>29</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ITCTRL</name>
+               <description>Integration Mode Control</description>
+               <addressOffset>0xF00</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>Mode</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CLAIMSET</name>
+               <description>Claim tag set</description>
+               <addressOffset>0xFA0</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>CLAIMCLR</name>
+               <description>Claim tag clear</description>
+               <addressOffset>0xFA4</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>DEVID</name>
+               <description>TPIU_DEVID</description>
+               <addressOffset>0xFC8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>NrTraceInput</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>AsynClkIn</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MinBufSz</name>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>PTINVALID</name>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MANCVALID</name>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NRZVALID</name>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>DEVTYPE</name>
+               <description>TPIU_DEVTYPE</description>
+               <addressOffset>0xFCC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>SubType</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>MajorType</name>
                      <bitOffset>4</bitOffset>
                      <bitWidth>4</bitWidth>
                   </field>

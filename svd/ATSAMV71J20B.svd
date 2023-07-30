@@ -21,10 +21,10 @@ Copyright (c) 2023 Microchip Technology Inc.
          xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
    <vendor>Microchip Technology</vendor>
    <vendorID>MCHP</vendorID>
-   <name>ATSAME70J19B</name>
-   <series>SAME70</series>
+   <name>ATSAMV71J20B</name>
+   <series>SAMV71</series>
    <version>0</version>
-   <description>Microchip ATSAME70J19B Microcontroller</description>
+   <description>Microchip ATSAMV71J20B Microcontroller</description>
    <cpu>
       <name>CM7</name>
       <revision>r1p1</revision>
@@ -59,6 +59,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>ACC</name>
+            <description>Analog Comparator</description>
             <value>33</value>
          </interrupt>
          <registers>
@@ -445,6 +446,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>AES</name>
+            <description>AES</description>
             <value>56</value>
          </interrupt>
          <registers>
@@ -984,6 +986,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>AFEC0</name>
+            <description>Analog Front End 0</description>
             <value>29</value>
          </interrupt>
          <registers>
@@ -2813,6 +2816,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40064000</baseAddress>
          <interrupt>
             <name>AFEC1</name>
+            <description>Analog Front End 1</description>
             <value>40</value>
          </interrupt>
       </peripheral>
@@ -3201,6 +3205,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>DACC</name>
+            <description>Digital To Analog Converter</description>
             <value>30</value>
          </interrupt>
          <registers>
@@ -3850,6 +3855,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>EFC</name>
+            <description>Enhanced Embedded Flash Controller</description>
             <value>6</value>
          </interrupt>
          <registers>
@@ -4142,26 +4148,32 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>GMAC</name>
+            <description>Ethernet MAC</description>
             <value>39</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q1</name>
+            <description>GMAC Queue 1</description>
             <value>66</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q2</name>
+            <description>GMAC Queue 2</description>
             <value>67</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q3</name>
+            <description>GMAC Queue 3</description>
             <value>71</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q4</name>
+            <description>GMAC Queue 4</description>
             <value>72</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q5</name>
+            <description>GMAC Queue 5</description>
             <value>73</value>
          </interrupt>
          <registers>
@@ -7369,6 +7381,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>ICM</name>
+            <description>Integrity Check Monitor</description>
             <value>32</value>
          </interrupt>
          <registers>
@@ -7824,6 +7837,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>ISI</name>
+            <description>Camera Interface</description>
             <value>59</value>
          </interrupt>
          <registers>
@@ -8934,6 +8948,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                         <bitOffset>24</bitOffset>
                         <bitWidth>2</bitWidth>
                      </field>
+                     <field>
+                        <name>M7PR</name>
+                        <description>Master 7 Priority</description>
+                        <bitOffset>28</bitOffset>
+                        <bitWidth>2</bitWidth>
+                     </field>
                   </fields>
                </register>
                <register>
@@ -8958,12 +8978,6 @@ Copyright (c) 2023 Microchip Technology Inc.
                         <name>M10PR</name>
                         <description>Master 10 Priority</description>
                         <bitOffset>8</bitOffset>
-                        <bitWidth>2</bitWidth>
-                     </field>
-                     <field>
-                        <name>M11PR</name>
-                        <description>Master 11 Priority</description>
-                        <bitOffset>12</bitOffset>
                         <bitWidth>2</bitWidth>
                      </field>
                      <field>
@@ -9024,6 +9038,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
+                     <name>RCB7</name>
+                     <description>Remap Command Bit for Master 7</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
                      <name>RCB8</name>
                      <description>Remap Command Bit for Master 8</description>
                      <bitOffset>8</bitOffset>
@@ -9039,12 +9059,6 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <name>RCB10</name>
                      <description>Remap Command Bit for Master 10</description>
                      <bitOffset>10</bitOffset>
-                     <bitWidth>1</bitWidth>
-                  </field>
-                  <field>
-                     <name>RCB11</name>
-                     <description>Remap Command Bit for Master 11</description>
-                     <bitOffset>11</bitOffset>
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
@@ -9256,10 +9270,12 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>MCAN0_INT0</name>
+            <description>MCAN Controller 0 Interrupt 0</description>
             <value>35</value>
          </interrupt>
          <interrupt>
             <name>MCAN0_INT1</name>
+            <description>MCAN Controller 0 Interrupt 1</description>
             <value>36</value>
          </interrupt>
          <registers>
@@ -13150,6 +13166,597 @@ Copyright (c) 2023 Microchip Technology Inc.
          </registers>
       </peripheral>
       <peripheral>
+         <name>MLB</name>
+         <version>11287E</version>
+         <description>MediaLB</description>
+         <baseAddress>0x40068000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x3E0</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <interrupt>
+            <name>MLB</name>
+            <description>MediaLB</description>
+            <value>53</value>
+         </interrupt>
+         <registers>
+            <register>
+               <name>MLBC0</name>
+               <description>MediaLB Control 0 Register</description>
+               <addressOffset>0x000</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>MLBEN</name>
+                     <description>MediaLB Enable</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MLBCLK</name>
+                     <description>MLBCLK (MediaLB clock) Speed Select</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>3</bitWidth>
+                     <enumeratedValues>
+                        <name>MLBCLKSelect</name>
+                        <enumeratedValue>
+                           <name>_256_FS</name>
+                           <description>256xFs (for MLBPEN = 0)</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>_512_FS</name>
+                           <description>512xFs (for MLBPEN = 0)</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>_1024_FS</name>
+                           <description>1024xFs (for MLBPEN = 0)</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>ZERO</name>
+                     <description>Must be Written to 0</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MLBLK</name>
+                     <description>MediaLB Lock Status (read-only)</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ASYRETRY</name>
+                     <description>Asynchronous Tx Packet Retry</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CTLRETRY</name>
+                     <description>Control Tx Packet Retry</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FCNT</name>
+                     <description>The number of frames per sub-buffer for synchronous channels</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>3</bitWidth>
+                     <enumeratedValues>
+                        <name>FCNTSelect</name>
+                        <enumeratedValue>
+                           <name>_1_FRAME</name>
+                           <description>1 frame per sub-buffer (Operation is the same as Standard mode.)</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>_2_FRAMES</name>
+                           <description>2 frames per sub-buffer</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>_4_FRAMES</name>
+                           <description>4 frames per sub-buffer</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>_8_FRAMES</name>
+                           <description>8 frames per sub-buffer</description>
+                           <value>0x3</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>_16_FRAMES</name>
+                           <description>16 frames per sub-buffer</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>_32_FRAMES</name>
+                           <description>32 frames per sub-buffer</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>_64_FRAMES</name>
+                           <description>64 frames per sub-buffer</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MS0</name>
+               <description>MediaLB Channel Status 0 Register</description>
+               <addressOffset>0x00C</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>MCS</name>
+                     <description>MediaLB Channel Status [31:0] (cleared by writing a 0)</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MS1</name>
+               <description>MediaLB Channel Status1 Register</description>
+               <addressOffset>0x014</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>MCS</name>
+                     <description>MediaLB Channel Status [63:32] (cleared by writing a 0)</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MSS</name>
+               <description>MediaLB System Status Register</description>
+               <addressOffset>0x020</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>RSTSYSCMD</name>
+                     <description>Reset System Command Detected in the System Quadlet (cleared by writing a 0)</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LKSYSCMD</name>
+                     <description>Network Lock System Command Detected in the System Quadlet (cleared by writing a 0)</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ULKSYSCMD</name>
+                     <description>Network Unlock System Command Detected in the System Quadlet (cleared by writing a 0)</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CSSYSCMD</name>
+                     <description>Channel Scan System Command Detected in the System Quadlet (cleared by writing a 0)</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SWSYSCMD</name>
+                     <description>Software System Command Detected in the System Quadlet (cleared by writing a 0)</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SERVREQ</name>
+                     <description>Service Request Enabled</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MSD</name>
+               <description>MediaLB System Data Register</description>
+               <addressOffset>0x024</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>SD0</name>
+                     <description>System Data (Byte 0)</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>SD1</name>
+                     <description>System Data (Byte 1)</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>SD2</name>
+                     <description>System Data (Byte 2)</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>SD3</name>
+                     <description>System Data (Byte 3)</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MIEN</name>
+               <description>MediaLB Interrupt Enable Register</description>
+               <addressOffset>0x02C</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>ISOC_PE</name>
+                     <description>Isochronous Rx Protocol Error Enable</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ISOC_BUFO</name>
+                     <description>Isochronous Rx Buffer Overflow Enable</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SYNC_PE</name>
+                     <description>Synchronous Protocol Error Enable</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ARX_DONE</name>
+                     <description>Asynchronous Rx Done Enable</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ARX_PE</name>
+                     <description>Asynchronous Rx Protocol Error Enable</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ARX_BREAK</name>
+                     <description>Asynchronous Rx Break Enable</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ATX_DONE</name>
+                     <description>Asynchronous Tx Packet Done Enable</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ATX_PE</name>
+                     <description>Asynchronous Tx Protocol Error Enable</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ATX_BREAK</name>
+                     <description>Asynchronous Tx Break Enable</description>
+                     <bitOffset>22</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRX_DONE</name>
+                     <description>Control Rx Packet Done Enable</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRX_PE</name>
+                     <description>Control Rx Protocol Error Enable</description>
+                     <bitOffset>25</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRX_BREAK</name>
+                     <description>Control Rx Break Enable</description>
+                     <bitOffset>26</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CTX_DONE</name>
+                     <description>Control Tx Packet Done Enable</description>
+                     <bitOffset>27</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CTX_PE</name>
+                     <description>Control Tx Protocol Error Enable</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CTX_BREAK</name>
+                     <description>Control Tx Break Enable</description>
+                     <bitOffset>29</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MLBC1</name>
+               <description>MediaLB Control 1 Register</description>
+               <addressOffset>0x03C</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>LOCK</name>
+                     <description>MediaLB Lock Error Status (cleared by writing a 0)</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CLKM</name>
+                     <description>MediaLB Clock Missing Status (cleared by writing a 0)</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NDA</name>
+                     <description>Node Device Address</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>HCTL</name>
+               <description>HBI Control Register</description>
+               <addressOffset>0x080</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>RST0</name>
+                     <description>Address Generation Unit 0 Software Reset</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>RST1</name>
+                     <description>Address Generation Unit 1 Software Reset</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EN</name>
+                     <description>HBI Enable</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>2</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>HCMR[%s]</name>
+               <description>HBI Channel Mask 0 Register 0</description>
+               <addressOffset>0x88</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>CHM</name>
+                     <description>Bitwise Channel Mask Bit [31:0]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>2</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>HCER[%s]</name>
+               <description>HBI Channel Error 0 Register 0</description>
+               <addressOffset>0x90</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>CERR</name>
+                     <description>Bitwise Channel Error Bit [31:0]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>2</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>HCBR[%s]</name>
+               <description>HBI Channel Busy 0 Register 0</description>
+               <addressOffset>0x98</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>CHB</name>
+                     <description>Bitwise Channel Busy Bit [31:0]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>4</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>MDAT[%s]</name>
+               <description>MIF Data 0 Register 0</description>
+               <addressOffset>0xC0</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>DATA</name>
+                     <description>CRT or DBR Data</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>4</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>MDWE[%s]</name>
+               <description>MIF Data Write Enable 0 Register 0</description>
+               <addressOffset>0xD0</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>MASK</name>
+                     <description>Bitwise Write Enable for CTR Data - bits[31:0]</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MCTL</name>
+               <description>MIF Control Register</description>
+               <addressOffset>0x0E0</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>XCMP</name>
+                     <description>Transfer Complete (Write 0 to Clear)</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MADR</name>
+               <description>MIF Address Register</description>
+               <addressOffset>0x0E4</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>ADDR</name>
+                     <description>CTR or DBR Address</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>14</bitWidth>
+                  </field>
+                  <field>
+                     <name>TB</name>
+                     <description>Target Location Bit</description>
+                     <bitOffset>30</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>TBSelect</name>
+                        <enumeratedValue>
+                           <name>CTR</name>
+                           <description>Selects CTR</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>DBR</name>
+                           <description>Selects DBR</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>WNR</name>
+                     <description>Write-Not-Read Selection</description>
+                     <bitOffset>31</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ACTL</name>
+               <description>AHB Control Register</description>
+               <addressOffset>0x3C0</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>SCE</name>
+                     <description>Software Clear Enable</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SMX</name>
+                     <description>AHB Interrupt Mux Enable</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DMA_MODE</name>
+                     <description>DMA Mode</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MPB</name>
+                     <description>DMA Packet Buffering Mode</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>MPBSelect</name>
+                        <enumeratedValue>
+                           <name>SINGLE_PACKET</name>
+                           <description>Single-packet mode</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>MULTIPLE_PACKET</name>
+                           <description>Multiple-packet mode</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>2</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>ACSR[%s]</name>
+               <description>AHB Channel Status 0 Register 0</description>
+               <addressOffset>0x3D0</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>CHS</name>
+                     <description>Interrupt Status for Logical Channels [31:0] (cleared by writing a 1)</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <dim>2</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>ACMR[%s]</name>
+               <description>AHB Channel Mask 0 Register 0</description>
+               <addressOffset>0x3D8</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>CHM</name>
+                     <description>Bitwise Channel Mask Bits 31 to 0</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
          <name>PIOA</name>
          <version>11004V</version>
          <description>Parallel Input/Output Controller</description>
@@ -13163,6 +13770,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>PIOA</name>
+            <description>Parallel I/O Controller A</description>
             <value>10</value>
          </interrupt>
          <registers>
@@ -22886,6 +23494,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x400E1000</baseAddress>
          <interrupt>
             <name>PIOB</name>
+            <description>Parallel I/O Controller B</description>
             <value>11</value>
          </interrupt>
       </peripheral>
@@ -22894,6 +23503,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x400E1400</baseAddress>
          <interrupt>
             <name>PIOD</name>
+            <description>Parallel I/O Controller D</description>
             <value>16</value>
          </interrupt>
       </peripheral>
@@ -22909,6 +23519,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>PMC</name>
+            <description>Power Management Controller</description>
             <value>5</value>
          </interrupt>
          <registers>
@@ -24726,6 +25337,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
+                     <name>PID53</name>
+                     <description>Peripheral Clock 53 Enable</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
                      <name>PID56</name>
                      <description>Peripheral Clock 56 Enable</description>
                      <bitOffset>24</bitOffset>
@@ -24861,6 +25478,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
+                     <name>PID53</name>
+                     <description>Peripheral Clock 53 Disable</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
                      <name>PID56</name>
                      <description>Peripheral Clock 56 Disable</description>
                      <bitOffset>24</bitOffset>
@@ -24993,6 +25616,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <name>PID52</name>
                      <description>Peripheral Clock 52 Status</description>
                      <bitOffset>20</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PID53</name>
+                     <description>Peripheral Clock 53 Status</description>
+                     <bitOffset>21</bitOffset>
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
@@ -25753,6 +26382,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
+                     <name>PID53</name>
+                     <description>Peripheral 53 SleepWalking Enable</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
                      <name>PID56</name>
                      <description>Peripheral 56 SleepWalking Enable</description>
                      <bitOffset>24</bitOffset>
@@ -25885,6 +26520,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <name>PID52</name>
                      <description>Peripheral 52 SleepWalking Disable</description>
                      <bitOffset>20</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PID53</name>
+                     <description>Peripheral 53 SleepWalking Disable</description>
+                     <bitOffset>21</bitOffset>
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
@@ -26023,6 +26664,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
+                     <name>PID53</name>
+                     <description>Peripheral 53 SleepWalking Status</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
                      <name>PID56</name>
                      <description>Peripheral 56 SleepWalking Status</description>
                      <bitOffset>24</bitOffset>
@@ -26158,6 +26805,12 @@ Copyright (c) 2023 Microchip Technology Inc.
                      <bitWidth>1</bitWidth>
                   </field>
                   <field>
+                     <name>PID53</name>
+                     <description>Peripheral 53 Activity Status</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
                      <name>PID56</name>
                      <description>Peripheral 56 Activity Status</description>
                      <bitOffset>24</bitOffset>
@@ -26220,6 +26873,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>PWM0</name>
+            <description>Pulse Width Modulation 0</description>
             <value>31</value>
          </interrupt>
          <registers>
@@ -28951,6 +29605,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x4005C000</baseAddress>
          <interrupt>
             <name>PWM1</name>
+            <description>Pulse Width Modulation 1</description>
             <value>60</value>
          </interrupt>
       </peripheral>
@@ -28966,6 +29621,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>QSPI</name>
+            <description>Quad I/O Serial Peripheral Interface</description>
             <value>43</value>
          </interrupt>
          <registers>
@@ -29717,6 +30373,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>RSTC</name>
+            <description>Reset Controller</description>
             <value>1</value>
          </interrupt>
          <registers>
@@ -29870,6 +30527,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>RSWDT</name>
+            <description>Reinforced Secure Watchdog Timer</description>
             <value>63</value>
          </interrupt>
          <registers>
@@ -29981,6 +30639,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>RTC</name>
+            <description>Real Time Clock</description>
             <value>2</value>
          </interrupt>
          <registers>
@@ -30773,6 +31432,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>RTT</name>
+            <description>Real Time Timer</description>
             <value>3</value>
          </interrupt>
          <registers>
@@ -30884,6 +31544,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>SSC</name>
+            <description>Synchronous Serial Controller</description>
             <value>22</value>
          </interrupt>
          <registers>
@@ -31845,6 +32506,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>SUPC</name>
+            <description>Supply Controller</description>
             <value>0</value>
          </interrupt>
          <registers>
@@ -33339,14 +34001,17 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>TC0</name>
+            <description>Timer/Counter 0</description>
             <value>23</value>
          </interrupt>
          <interrupt>
             <name>TC1</name>
+            <description>Timer/Counter 1</description>
             <value>24</value>
          </interrupt>
          <interrupt>
             <name>TC2</name>
+            <description>Timer/Counter 2</description>
             <value>25</value>
          </interrupt>
          <registers>
@@ -34819,14 +35484,17 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40010000</baseAddress>
          <interrupt>
             <name>TC3</name>
+            <description>Timer/Counter 3</description>
             <value>26</value>
          </interrupt>
          <interrupt>
             <name>TC4</name>
+            <description>Timer/Counter 4</description>
             <value>27</value>
          </interrupt>
          <interrupt>
             <name>TC5</name>
+            <description>Timer/Counter 5</description>
             <value>28</value>
          </interrupt>
       </peripheral>
@@ -34835,14 +35503,17 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40014000</baseAddress>
          <interrupt>
             <name>TC6</name>
+            <description>Timer/Counter 6</description>
             <value>47</value>
          </interrupt>
          <interrupt>
             <name>TC7</name>
+            <description>Timer/Counter 7</description>
             <value>48</value>
          </interrupt>
          <interrupt>
             <name>TC8</name>
+            <description>Timer/Counter 8</description>
             <value>49</value>
          </interrupt>
       </peripheral>
@@ -34851,14 +35522,17 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40054000</baseAddress>
          <interrupt>
             <name>TC9</name>
+            <description>Timer/Counter 9</description>
             <value>50</value>
          </interrupt>
          <interrupt>
             <name>TC10</name>
+            <description>Timer/Counter 10</description>
             <value>51</value>
          </interrupt>
          <interrupt>
             <name>TC11</name>
+            <description>Timer/Counter 11</description>
             <value>52</value>
          </interrupt>
       </peripheral>
@@ -34874,6 +35548,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>TRNG</name>
+            <description>True Random Generator</description>
             <value>57</value>
          </interrupt>
          <registers>
@@ -34997,6 +35672,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>TWIHS0</name>
+            <description>Two Wire Interface 0 HS</description>
             <value>19</value>
          </interrupt>
          <registers>
@@ -35924,6 +36600,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x4001C000</baseAddress>
          <interrupt>
             <name>TWIHS1</name>
+            <description>Two Wire Interface 1 HS</description>
             <value>20</value>
          </interrupt>
       </peripheral>
@@ -35941,6 +36618,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>UART0</name>
+            <description>UART 0</description>
             <value>7</value>
          </interrupt>
          <registers>
@@ -36438,6 +37116,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x400E0A00</baseAddress>
          <interrupt>
             <name>UART1</name>
+            <description>UART 1</description>
             <value>8</value>
          </interrupt>
       </peripheral>
@@ -36446,6 +37125,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x400E1A00</baseAddress>
          <interrupt>
             <name>UART2</name>
+            <description>UART 2</description>
             <value>44</value>
          </interrupt>
       </peripheral>
@@ -36463,6 +37143,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>USART0</name>
+            <description>USART 0</description>
             <value>13</value>
          </interrupt>
          <registers>
@@ -39231,6 +39912,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40028000</baseAddress>
          <interrupt>
             <name>USART1</name>
+            <description>USART 1</description>
             <value>14</value>
          </interrupt>
       </peripheral>
@@ -39246,6 +39928,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>USBHS</name>
+            <description>USB Host / Device Controller</description>
             <value>34</value>
          </interrupt>
          <registers>
@@ -46816,6 +47499,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>WDT</name>
+            <description>Watchdog Timer</description>
             <value>4</value>
          </interrupt>
          <registers>
@@ -46933,6 +47617,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>XDMAC</name>
+            <description>DMA</description>
             <value>58</value>
          </interrupt>
          <registers>
@@ -50093,7 +50778,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0</baseAddress>
          <addressBlock>
             <offset>0</offset>
-            <size>0x4</size>
+            <size>0x8</size>
             <usage>registers</usage>
          </addressBlock>
          <registers>
@@ -50297,6 +50982,206 @@ Copyright (c) 2023 Microchip Technology Inc.
                   </field>
                </fields>
             </register>
+            <register>
+               <name>WORD1</name>
+               <description>Lock Bits Word 1</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>LOCK_REGION_32</name>
+                     <description>Lock Region 32</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_33</name>
+                     <description>Lock Region 33</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_34</name>
+                     <description>Lock Region 34</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_35</name>
+                     <description>Lock Region 35</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_36</name>
+                     <description>Lock Region 36</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_37</name>
+                     <description>Lock Region 37</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_38</name>
+                     <description>Lock Region 38</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_39</name>
+                     <description>Lock Region 39</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_40</name>
+                     <description>Lock Region 40</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_41</name>
+                     <description>Lock Region 41</description>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_42</name>
+                     <description>Lock Region 42</description>
+                     <bitOffset>10</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_43</name>
+                     <description>Lock Region 43</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_44</name>
+                     <description>Lock Region 44</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_45</name>
+                     <description>Lock Region 45</description>
+                     <bitOffset>13</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_46</name>
+                     <description>Lock Region 46</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_47</name>
+                     <description>Lock Region 47</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_48</name>
+                     <description>Lock Region 48</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_49</name>
+                     <description>Lock Region 49</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_50</name>
+                     <description>Lock Region 50</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_51</name>
+                     <description>Lock Region 51</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_52</name>
+                     <description>Lock Region 52</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_53</name>
+                     <description>Lock Region 53</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_54</name>
+                     <description>Lock Region 54</description>
+                     <bitOffset>22</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_55</name>
+                     <description>Lock Region 55</description>
+                     <bitOffset>23</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_56</name>
+                     <description>Lock Region 56</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_57</name>
+                     <description>Lock Region 57</description>
+                     <bitOffset>25</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_58</name>
+                     <description>Lock Region 58</description>
+                     <bitOffset>26</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_59</name>
+                     <description>Lock Region 59</description>
+                     <bitOffset>27</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_60</name>
+                     <description>Lock Region 60</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_61</name>
+                     <description>Lock Region 61</description>
+                     <bitOffset>29</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_62</name>
+                     <description>Lock Region 62</description>
+                     <bitOffset>30</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>LOCK_REGION_63</name>
+                     <description>Lock Region 63</description>
+                     <bitOffset>31</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
          </registers>
       </peripheral>
       <peripheral>
@@ -50414,10 +51299,12 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>CCW</name>
+            <description>Cache ECC Warning</description>
             <value>64</value>
          </interrupt>
          <interrupt>
             <name>CCF</name>
+            <description>Cache ECC Fault</description>
             <value>65</value>
          </interrupt>
          <registers>
@@ -52609,10 +53496,12 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>FPU</name>
+            <description>Floating Point Unit</description>
             <value>61</value>
          </interrupt>
          <interrupt>
             <name>IXC</name>
+            <description>Floating Point Unit IXC</description>
             <value>68</value>
          </interrupt>
          <registers>
