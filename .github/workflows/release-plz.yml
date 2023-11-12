@@ -22,7 +22,7 @@ jobs:
           targets: thumbv7em-none-eabihf
       - name: Proper PAC crates generation
         run: |
-          python3 tools/pacs.py
+          python3 tools/pacs.py ./svd
       - name: Fire up `release-plz`
         uses: MarcoIeni/release-plz-action@v0.5
         env:
