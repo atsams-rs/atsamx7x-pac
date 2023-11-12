@@ -20,6 +20,9 @@ jobs:
         with:
           toolchain: 1.63.0 # TODO: make MSRV an CI environment variable
           targets: thumbv7em-none-eabihf
+      - name: Proper PAC crates generation
+        run: |
+          python3 tools/pacs.py
       - name: Fire up `release-plz`
         uses: MarcoIeni/release-plz-action@v0.5
         env:
