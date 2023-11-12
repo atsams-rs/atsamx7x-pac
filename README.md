@@ -9,7 +9,25 @@ The PACs are generated from SVD files provided by Microchip, publicly available 
 This repository employs a [trunk-based development](https://trunkbaseddevelopment.com/): development occurs on `development` with short-lived branches that merges into it.
 When a release is met, for example a `v0.3.2` release, a `release/v0.3.x` branch is spun of `development` and the release tagged. If this branch already exists, relevant commits are back-ported instead.
 
-Development is done towards `development`.
+Development is done towards `development` branch.
+
+### Commit Messages
+
+This repository follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification, but with
+first letter **capitalized**, for example:
+```markdown
+Fix: Add missing files
+
+Building the create demonstrated some files were uncommitted, this rectifies the problem.
+
+Resolves #999 
+```
+or
+```markdown
+Chore(Release): Prepare for 99.999.999
+
+Closes #998
+```
 
 ## Building
 
@@ -23,7 +41,7 @@ and build the examples:
 ```
 
 ## Flashing the device
-Refer to the [SAM V71 Xplained Ultra README](boards/atsamv71_xult/README.md).
+Refer to the [SAM V71 Xplained Ultra README](/atsams-rs/atsamx7x-rust/boards/atsamv71_xult/README.md).
 
 ## Extra Documentation
 * [Development Guide](docs/development.md)
@@ -32,8 +50,8 @@ Refer to the [SAM V71 Xplained Ultra README](boards/atsamv71_xult/README.md).
 
 All source code in this repository is licensed under either of
 
-Apache License, Version 2.0 ([LICENSE-APACHE](./LICENSE-APACHE) or https://www.apache.org/licenses/LICENSE-2.0)
-MIT license ([LICENSE-MIT](./LICENSE-MIT) or https://opensource.org/licenses/MIT)
+* Apache License, Version 2.0 ([LICENSE-APACHE](./LICENCE-APACHE) or https://www.apache.org/licenses/LICENSE-2.0)
+* MIT license ([LICENSE-MIT](./LICENSE-MIT) or https://opensource.org/licenses/MIT) \
 at your option.
 
 ## Contribution

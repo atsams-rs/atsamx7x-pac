@@ -13,6 +13,6 @@ labels: bug
 # Platform & Tools Details
 
 Rust Version:
-Crates names & versions: <!-- What creates you have in Cargo.toml? -->
-Host operating system:
+Crates names & versions: <!-- What creates you have in Cargo.toml? -->\
+Host operating system:\
 Target details: <!-- Provide as much details you can about you target -->

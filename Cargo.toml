@@ -14,13 +14,13 @@ exclude = [
 ]
 
 [workspace.package]
-version = "0.28.0-alpha2"
+version = "0.28.0"
 license = "MIT OR Apache-2.0"
 authors = ["Michal Fita <4925040+michalfita@users.noreply.github.com>"]
 categories = ["no-std", "embedded", "hardware-support"]
 keywords = ["no-std", "arm", "cortex-m", "atsam", "pac"]
 repository = "https://github.com/atsams-rs/atsamx7x-rust"
 edition = "2021"
-rust-version = "1.63.0"
+rust-version = "1.65.0"
 
 [workspace.dependencies]
