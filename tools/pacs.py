@@ -43,7 +43,8 @@ def arguments():
 def main(argv: list[str]):
     args = arguments()
     svd_version_map = read_svd_version_map(args.mapping)  # TODO: change as option / make sure harvester updates, not overwrites
-    all_svd_files = glob.iglob("ATSAM[E,S,V]7[0,1]*.svd", root_dir=args.svddir)
+    # all_svd_files = glob.iglob("ATSAM[E,S,V]7[0,1]*.svd", root_dir=args.svddir)
+    all_svd_files = glob.iglob("ATSAM[E,S,V,RH]*[0,1,7][0,1,7]*.svd", root_dir=args.svddir)
     for svd_file in all_svd_files:
         pac_name = pathlib.Path(svd_file).stem.lower()
         pac_path = pathlib.Path("pac/%s" % pac_name)  # TODO: pac out dir as arg?
