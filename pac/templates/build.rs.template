@@ -45,6 +45,7 @@ fn main() {
     let config = Config {
         target: Target::CortexM,
         atomics: false,
+        atomics_feature: None,
         generic_mod: false,
         make_mod: true,
         const_generic: true,
@@ -56,10 +57,13 @@ fn main() {
         feature_group: false,
         feature_peripheral: false,
         max_cluster_size: false,
+        impl_debug: false, // TODO: consider this behind feature flag
+        impl_debug_feature: None,
         output_dir: Path::new(&env::var_os("OUT_DIR").unwrap()).into(),
         input: None,
         source_type: SourceType::from_path(Path::new(SVDFILE)),
-        log_level: None
+        log_level: None,
+        interrupt_link_section: None,
     };
 
     let input = &mut String::new();
