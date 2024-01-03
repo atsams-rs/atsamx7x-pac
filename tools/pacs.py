@@ -35,6 +35,7 @@ def read_svd_version_map(location: pathlib.Path) -> dict[str,str]:
 def arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("svddir", type=pathlib.Path, help="directory with SVD collection")
+    parser.add_argument("pacdir", type=pathlib.Path, help="directory to produce PACs to")
     parser.add_argument("-m", "--mapping", type=pathlib.Path,
                         required=False, metavar="mapfile.json", default=pathlib.Path("./svdmap.json"),
                         help="json file with version mappings (from `harvester`)")
@@ -43,17 +44,17 @@ def arguments():
 def main(argv: list[str]):
     args = arguments()
     svd_version_map = read_svd_version_map(args.mapping)  # TODO: change as option / make sure harvester updates, not overwrites
-    all_svd_files = glob.iglob("ATSAM[E,S,V]7[0,1]*.svd", root_dir=args.svddir)
+    all_svd_files = glob.iglob("ATSAM[E,S,V,RH]*7[0,1]*.svd", root_dir=args.svddir)
     for svd_file in all_svd_files:
         pac_name = pathlib.Path(svd_file).stem.lower()
-        pac_path = pathlib.Path("pac/%s" % pac_name)  # TODO: pac out dir as arg?
+        pac_path = pathlib.Path(f"{args.pacdir}/{pac_name}")
         print("Converting {} to {}".format(svd_file, pac_path))
         shutil.rmtree(pac_path, ignore_errors=True)
         os.makedirs(pac_path)
         data = {
             'crate': str(pac_name),
             'chip': str(pac_name).upper(),
-            'svd2rust_version': "0.28.0",  # TODO: keep in synced
+            'svd2rust_version': "0.29.0",  # TODO: keep in synced
             'atpack_version': svd_version_map.get(str(pac_name).upper(), "(unknown)"),  # TODO: process `svdmap.json`
         }
         link_svd_file(pathlib.Path(os.getcwd(), args.svddir, svd_file), pathlib.Path(os.getcwd(), pac_path))
