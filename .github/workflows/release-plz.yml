@@ -1,5 +1,8 @@
 name: Release Automation
 
+env:
+  MSRV: 1.63.0
+
 on:
   push:
     branches:
@@ -18,11 +21,11 @@ jobs:
       - name: Install the Rust toolchain
         uses: dtolnay/rust-toolchain@master
         with:
-          toolchain: 1.63.0 # TODO: make MSRV an CI environment variable
+          toolchain: ${{ env.MSRV }}
           targets: thumbv7em-none-eabihf
       - name: Proper PAC crates generation
         run: |
-          python3 tools/pacs.py ./svd
+          python3 tools/pacs.py ./svd ./pac
       - name: Fire up `release-plz`
         uses: MarcoIeni/release-plz-action@v0.5
         env:
