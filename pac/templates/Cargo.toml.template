@@ -26,7 +26,7 @@ name = "${crate}"
 path = "src/lib.rs"
 
 [build-dependencies]
-svd2rust = "0.29.0"
+svd2rust = "${svd2rust_version}"
 form = { version = "0.11.1" }
 regex = "1.10.0"
 

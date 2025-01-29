@@ -54,8 +54,8 @@ def main(argv: list[str]):
         data = {
             'crate': str(pac_name),
             'chip': str(pac_name).upper(),
-            'svd2rust_version': "0.29.0",  # TODO: keep in synced
-            'atpack_version': svd_version_map.get(str(pac_name).upper(), "(unknown)"),  # TODO: process `svdmap.json`
+            'svd2rust_version': "0.30.0",  # TODO: keep in synced
+            'atpack_version': svd_version_map.get(str(pac_name).upper(), "(unknown)"),
         }
         link_svd_file(pathlib.Path(os.getcwd(), args.svddir, svd_file), pathlib.Path(os.getcwd(), pac_path))
         generate_crate(pathlib.Path("pac/templates"), pac_path, data)

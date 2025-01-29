@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2023 Microchip Technology Inc.
+Copyright (c) 2025 Microchip Technology Inc.
 
  SPDX-License-Identifier: Apache-2.0
 
@@ -4143,7 +4143,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40050000</baseAddress>
          <addressBlock>
             <offset>0</offset>
-            <size>0x820</size>
+            <size>0x7C0</size>
             <usage>registers</usage>
          </addressBlock>
          <interrupt>
@@ -7376,7 +7376,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40000000</baseAddress>
          <addressBlock>
             <offset>0</offset>
-            <size>0xB58</size>
+            <size>0x600</size>
             <usage>registers</usage>
          </addressBlock>
          <interrupt>
@@ -50399,7 +50399,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40078000</baseAddress>
          <addressBlock>
             <offset>0</offset>
-            <size>0xE60</size>
+            <size>0x650</size>
             <usage>registers</usage>
          </addressBlock>
          <interrupt>

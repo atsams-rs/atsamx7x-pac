@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2023 Microchip Technology Inc.
+Copyright (c) 2024 Microchip Technology Inc.
 
  SPDX-License-Identifier: Apache-2.0
 
@@ -59,6 +59,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>ACC</name>
+            <description>Analog Comparator</description>
             <value>33</value>
          </interrupt>
          <registers>
@@ -445,6 +446,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>AES</name>
+            <description>AES</description>
             <value>56</value>
          </interrupt>
          <registers>
@@ -984,6 +986,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>AFEC0</name>
+            <description>Analog Front End 0</description>
             <value>29</value>
          </interrupt>
          <registers>
@@ -2813,6 +2816,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40064000</baseAddress>
          <interrupt>
             <name>AFEC1</name>
+            <description>Analog Front End 1</description>
             <value>40</value>
          </interrupt>
       </peripheral>
@@ -3201,6 +3205,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>DACC</name>
+            <description>Digital To Analog Converter</description>
             <value>30</value>
          </interrupt>
          <registers>
@@ -3850,6 +3855,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>EFC</name>
+            <description>Enhanced Embedded Flash Controller</description>
             <value>6</value>
          </interrupt>
          <registers>
@@ -4137,31 +4143,37 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40050000</baseAddress>
          <addressBlock>
             <offset>0</offset>
-            <size>0x820</size>
+            <size>0x7C0</size>
             <usage>registers</usage>
          </addressBlock>
          <interrupt>
             <name>GMAC</name>
+            <description>Ethernet MAC</description>
             <value>39</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q1</name>
+            <description>GMAC Queue 1</description>
             <value>66</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q2</name>
+            <description>GMAC Queue 2</description>
             <value>67</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q3</name>
+            <description>GMAC Queue 3</description>
             <value>71</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q4</name>
+            <description>GMAC Queue 4</description>
             <value>72</value>
          </interrupt>
          <interrupt>
             <name>GMAC_Q5</name>
+            <description>GMAC Queue 5</description>
             <value>73</value>
          </interrupt>
          <registers>
@@ -7369,6 +7381,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>ICM</name>
+            <description>Integrity Check Monitor</description>
             <value>32</value>
          </interrupt>
          <registers>
@@ -7824,6 +7837,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>ISI</name>
+            <description>Camera Interface</description>
             <value>59</value>
          </interrupt>
          <registers>
@@ -9256,10 +9270,12 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>MCAN0_INT0</name>
+            <description>MCAN Controller 0 Interrupt 0</description>
             <value>35</value>
          </interrupt>
          <interrupt>
             <name>MCAN0_INT1</name>
+            <description>MCAN Controller 0 Interrupt 1</description>
             <value>36</value>
          </interrupt>
          <registers>
@@ -13163,6 +13179,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>PIOA</name>
+            <description>Parallel I/O Controller A</description>
             <value>10</value>
          </interrupt>
          <registers>
@@ -22886,6 +22903,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x400E1000</baseAddress>
          <interrupt>
             <name>PIOB</name>
+            <description>Parallel I/O Controller B</description>
             <value>11</value>
          </interrupt>
       </peripheral>
@@ -22894,6 +22912,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x400E1400</baseAddress>
          <interrupt>
             <name>PIOD</name>
+            <description>Parallel I/O Controller D</description>
             <value>16</value>
          </interrupt>
       </peripheral>
@@ -22909,6 +22928,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>PMC</name>
+            <description>Power Management Controller</description>
             <value>5</value>
          </interrupt>
          <registers>
@@ -26220,6 +26240,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>PWM0</name>
+            <description>Pulse Width Modulation 0</description>
             <value>31</value>
          </interrupt>
          <registers>
@@ -28951,6 +28972,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x4005C000</baseAddress>
          <interrupt>
             <name>PWM1</name>
+            <description>Pulse Width Modulation 1</description>
             <value>60</value>
          </interrupt>
       </peripheral>
@@ -28966,6 +28988,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>QSPI</name>
+            <description>Quad I/O Serial Peripheral Interface</description>
             <value>43</value>
          </interrupt>
          <registers>
@@ -29717,6 +29740,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>RSTC</name>
+            <description>Reset Controller</description>
             <value>1</value>
          </interrupt>
          <registers>
@@ -29870,6 +29894,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>RSWDT</name>
+            <description>Reinforced Secure Watchdog Timer</description>
             <value>63</value>
          </interrupt>
          <registers>
@@ -29981,6 +30006,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>RTC</name>
+            <description>Real Time Clock</description>
             <value>2</value>
          </interrupt>
          <registers>
@@ -30773,6 +30799,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>RTT</name>
+            <description>Real Time Timer</description>
             <value>3</value>
          </interrupt>
          <registers>
@@ -30884,6 +30911,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>SSC</name>
+            <description>Synchronous Serial Controller</description>
             <value>22</value>
          </interrupt>
          <registers>
@@ -31845,6 +31873,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>SUPC</name>
+            <description>Supply Controller</description>
             <value>0</value>
          </interrupt>
          <registers>
@@ -33339,14 +33368,17 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>TC0</name>
+            <description>Timer/Counter 0</description>
             <value>23</value>
          </interrupt>
          <interrupt>
             <name>TC1</name>
+            <description>Timer/Counter 1</description>
             <value>24</value>
          </interrupt>
          <interrupt>
             <name>TC2</name>
+            <description>Timer/Counter 2</description>
             <value>25</value>
          </interrupt>
          <registers>
@@ -34819,14 +34851,17 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40010000</baseAddress>
          <interrupt>
             <name>TC3</name>
+            <description>Timer/Counter 3</description>
             <value>26</value>
          </interrupt>
          <interrupt>
             <name>TC4</name>
+            <description>Timer/Counter 4</description>
             <value>27</value>
          </interrupt>
          <interrupt>
             <name>TC5</name>
+            <description>Timer/Counter 5</description>
             <value>28</value>
          </interrupt>
       </peripheral>
@@ -34835,14 +34870,17 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40014000</baseAddress>
          <interrupt>
             <name>TC6</name>
+            <description>Timer/Counter 6</description>
             <value>47</value>
          </interrupt>
          <interrupt>
             <name>TC7</name>
+            <description>Timer/Counter 7</description>
             <value>48</value>
          </interrupt>
          <interrupt>
             <name>TC8</name>
+            <description>Timer/Counter 8</description>
             <value>49</value>
          </interrupt>
       </peripheral>
@@ -34851,14 +34889,17 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40054000</baseAddress>
          <interrupt>
             <name>TC9</name>
+            <description>Timer/Counter 9</description>
             <value>50</value>
          </interrupt>
          <interrupt>
             <name>TC10</name>
+            <description>Timer/Counter 10</description>
             <value>51</value>
          </interrupt>
          <interrupt>
             <name>TC11</name>
+            <description>Timer/Counter 11</description>
             <value>52</value>
          </interrupt>
       </peripheral>
@@ -34874,6 +34915,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>TRNG</name>
+            <description>True Random Generator</description>
             <value>57</value>
          </interrupt>
          <registers>
@@ -34997,6 +35039,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>TWIHS0</name>
+            <description>Two Wire Interface 0 HS</description>
             <value>19</value>
          </interrupt>
          <registers>
@@ -35924,6 +35967,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x4001C000</baseAddress>
          <interrupt>
             <name>TWIHS1</name>
+            <description>Two Wire Interface 1 HS</description>
             <value>20</value>
          </interrupt>
       </peripheral>
@@ -35941,6 +35985,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>UART0</name>
+            <description>UART 0</description>
             <value>7</value>
          </interrupt>
          <registers>
@@ -36438,6 +36483,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x400E0A00</baseAddress>
          <interrupt>
             <name>UART1</name>
+            <description>UART 1</description>
             <value>8</value>
          </interrupt>
       </peripheral>
@@ -36446,6 +36492,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x400E1A00</baseAddress>
          <interrupt>
             <name>UART2</name>
+            <description>UART 2</description>
             <value>44</value>
          </interrupt>
       </peripheral>
@@ -36463,6 +36510,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>USART0</name>
+            <description>USART 0</description>
             <value>13</value>
          </interrupt>
          <registers>
@@ -39231,6 +39279,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40028000</baseAddress>
          <interrupt>
             <name>USART1</name>
+            <description>USART 1</description>
             <value>14</value>
          </interrupt>
       </peripheral>
@@ -39246,6 +39295,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>USBHS</name>
+            <description>USB Host / Device Controller</description>
             <value>34</value>
          </interrupt>
          <registers>
@@ -46816,6 +46866,7 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>WDT</name>
+            <description>Watchdog Timer</description>
             <value>4</value>
          </interrupt>
          <registers>
@@ -46928,11 +46979,12 @@ Copyright (c) 2023 Microchip Technology Inc.
          <baseAddress>0x40078000</baseAddress>
          <addressBlock>
             <offset>0</offset>
-            <size>0xE60</size>
+            <size>0x650</size>
             <usage>registers</usage>
          </addressBlock>
          <interrupt>
             <name>XDMAC</name>
+            <description>DMA</description>
             <value>58</value>
          </interrupt>
          <registers>
@@ -50614,10 +50666,12 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>CCW</name>
+            <description>Cache ECC Warning</description>
             <value>64</value>
          </interrupt>
          <interrupt>
             <name>CCF</name>
+            <description>Cache ECC Fault</description>
             <value>65</value>
          </interrupt>
          <registers>
@@ -52809,10 +52863,12 @@ Copyright (c) 2023 Microchip Technology Inc.
          </addressBlock>
          <interrupt>
             <name>FPU</name>
+            <description>Floating Point Unit</description>
             <value>61</value>
          </interrupt>
          <interrupt>
             <name>IXC</name>
+            <description>Floating Point Unit IXC</description>
             <value>68</value>
          </interrupt>
          <registers>
