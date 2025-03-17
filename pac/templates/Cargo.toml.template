@@ -27,6 +27,7 @@ path = "src/lib.rs"
 
 [build-dependencies]
 svd2rust = "${svd2rust_version}"
-form = { version = "0.11.1" }
+form = { version = "0.12.1" }
+
 regex = "1.10.0"
 
