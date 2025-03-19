@@ -1,6 +1,6 @@
 use form::create_directory_structure;
 use svd2rust::generate;
-use svd2rust::util::{Config, Target, SourceType};
+use svd2rust::config::{Config, SourceType};
 use std::env;
 use std::fs::File;
 use std::io::{Read, Write};
@@ -33,7 +33,7 @@ fn write_lib_rs(path: &Path, content: &str) {
     // file.write_all(content.as_bytes()/*data.as_ref()*/)
         // .expect("Could not write code to lib.rs");
 
-    create_directory_structure(path, content)
+    create_directory_structure(path, content, true) // true here formats the lib.rs file
         .expect("Directory structure creation failed!");
 
     println!("cargo:rerun-if-changed=lib.rs");
@@ -42,29 +42,35 @@ fn write_lib_rs(path: &Path, content: &str) {
 const SVDFILE: &str = "svd/chip.svd";
 
 fn main() {
-    let config = Config {
-        target: Target::CortexM,
-        atomics: false,
-        atomics_feature: None,
-        generic_mod: false,
-        make_mod: true,
-        const_generic: true,
-        ignore_groups: false,
-        keep_list: false,
-        strict: true,
-        pascal_enum_values: false,
-        derive_more: true,
-        feature_group: false,
-        feature_peripheral: false,
-        max_cluster_size: false,
-        impl_debug: false, // TODO: consider this behind feature flag
-        impl_debug_feature: None,
-        output_dir: Path::new(&env::var_os("OUT_DIR").unwrap()).into(),
-        input: None,
-        source_type: SourceType::from_path(Path::new(SVDFILE)),
-        log_level: None,
-        interrupt_link_section: None,
-    };
+    /*  svd2rust 0.30.0 -> 0.36.0
+        - const_generic: true         , removed in v0.31.0, see https://github.com/rust-embedded/svd2rust/pull/692
+        - pascal_enum_values: false   , replaced infavor of ident-formats in v0.32.0, https://github.com/rust-embedded/svd2rust/pull/812
+        - derive_more: true           , removed in v0.30.0, see https://github.com/rust-embedded/svd2rust/pull/731
+
+        + skip_crate_attributes: true , set true to enable us to use the `include!` macro as we already do
+        + impl_defmt
+        + reexport_core_peripherals
+        + reexport_interrupt
+        + ident_formats               , set to legacy_theme to keep formating for the hal
+        + ident_formats_theme
+        + field_names_for_enums
+        + base_address_shift
+        + settings_file
+        + settings
+    */
+    let mut config = Config::default();
+    config.make_mod = true;
+    config.skip_crate_attributes = true;
+    config.strict = true;
+    config.output_dir = Some(Path::new(&env::var_os("OUT_DIR").unwrap()).to_path_buf());
+    config.source_type = SourceType::from_path(Path::new(SVDFILE));
+    config.reexport_core_peripherals = true; // Maybe?
+    config.reexport_interrupt = true;        // Maybe?
+    config.ident_formats = svd2rust::config::IdentFormats::legacy_theme();
+    let mut p = PathBuf::new();
+    p.push(Path::new(&env::var_os("OUT_DIR").unwrap()));
+    config.output_dir =  Some(p);
+    config.source_type = SourceType::from_path(Path::new(SVDFILE));
 
     let input = &mut String::new();
     File::open(SVDFILE)
