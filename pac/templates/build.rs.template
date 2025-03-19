@@ -53,7 +53,6 @@ fn main() {
         keep_list: false,
         strict: true,
         pascal_enum_values: false,
-        derive_more: true,
         feature_group: false,
         feature_peripheral: false,
         max_cluster_size: false,
