@@ -1,6 +1,6 @@
 use form::create_directory_structure;
 use svd2rust::generate;
-use svd2rust::util::{Config, Target, SourceType};
+use svd2rust::config::{Config, Target, SourceType};
 use std::env;
 use std::fs::File;
 use std::io::{Read, Write};
@@ -27,13 +27,7 @@ mod inner {
 }
 
 fn write_lib_rs(path: &Path, content: &str) {
-    //let mut file = File::create(path.join("lib.rs")).expect("Couldn't create output file");
-
-    //let data = items.to_string().replace("] ", "]\n");
-    // file.write_all(content.as_bytes()/*data.as_ref()*/)
-        // .expect("Could not write code to lib.rs");
-
-    create_directory_structure(path, content)
+    create_directory_structure(path, content, true)
         .expect("Directory structure creation failed!");
 
     println!("cargo:rerun-if-changed=lib.rs");
@@ -42,28 +36,65 @@ fn write_lib_rs(path: &Path, content: &str) {
 const SVDFILE: &str = "svd/chip.svd";
 
 fn main() {
-    let config = Config {
-        target: Target::CortexM,
-        atomics: false,
-        atomics_feature: None,
-        generic_mod: false,
-        make_mod: true,
-        const_generic: true,
-        ignore_groups: false,
-        keep_list: false,
-        strict: true,
-        pascal_enum_values: false,
-        feature_group: false,
-        feature_peripheral: false,
-        max_cluster_size: false,
-        impl_debug: false, // TODO: consider this behind feature flag
-        impl_debug_feature: None,
-        output_dir: Path::new(&env::var_os("OUT_DIR").unwrap()).into(),
-        input: None,
-        source_type: SourceType::from_path(Path::new(SVDFILE)),
-        log_level: None,
-        interrupt_link_section: None,
-    };
+    // TODO: watch https://github.com/rust-embedded/svd2rust/issues/925
+    // let config = Config {
+    //     target: Target::CortexM,
+    //     atomics: false,
+    //     atomics_feature: None,
+    //     generic_mod: false,
+    //     make_mod: true,
+    //     skip_crate_attributes: false, // If I understand it opens for Peripheral Features API
+    //     ignore_groups: false,
+    //     keep_list: false,
+    //     strict: true,
+    //     feature_group: false,
+    //     feature_peripheral: false,
+    //     max_cluster_size: false,
+    //     impl_debug: false, // TODO: consider this behind feature flag
+    //     impl_debug_feature: None,
+    //     impl_defmt: None,
+    //     output_dir: PathBuf::from(&env::var_os("OUT_DIR").unwrap()).into(),
+    //     input: None,
+    //     source_type: SourceType::from_path(Path::new(SVDFILE)),
+    //     log_level: None,
+    //     interrupt_link_section: None,
+    //     reexport_core_peripherals: true, // Probably harmless
+    //     reexport_interrupt: true, // Probably harmless
+    //     ident_formats: svd2rust::config::IdentFormats::legacy_theme(), // TODO: screams for switch to default one
+    //     ident_formats_theme: None,
+    //     field_names_for_enums: false, // TODO: what it does?
+    //     base_address_shift: 0,
+    //     html_url: None, // TODO: it allows docs link to URLs with peripheral schematics or register structure
+    // };
+
+    let mut config = Config::default();
+    config.target = Target::CortexM;
+    config.atomics = false;
+    config.atomics_feature = None;
+    config.generic_mod = false;
+    config.make_mod = true;
+    config.skip_crate_attributes = true; // If I understand it opens for Peripheral Features API; false breaks builds
+    config.ignore_groups = false;
+    config.keep_list = false;
+    config.strict = true;
+    config.feature_group = false;
+    config.feature_peripheral = false;
+    config.max_cluster_size = false;
+    config.impl_debug = false; // TODO = consider this behind feature flag
+    config.impl_debug_feature = None;
+    config.impl_defmt = None;
+    config.output_dir = PathBuf::from(&env::var_os("OUT_DIR").unwrap()).into();
+    config.input = None;
+    config.source_type = SourceType::from_path(Path::new(SVDFILE));
+    config.log_level = None;
+    config.interrupt_link_section = None;
+    config.reexport_core_peripherals = true; // Probably harmless
+    config.reexport_interrupt = true; // Probably harmless
+    config.ident_formats = svd2rust::config::IdentFormats::legacy_theme(); // TODO: screams for switch to default one
+    config.ident_formats_theme = None;
+    config.field_names_for_enums = false; // TODO = what it does?
+    config.base_address_shift = 0;
+    config.html_url = None; // TODO: it allows docs link to URLs with peripheral schematics or register structure
 
     let input = &mut String::new();
     File::open(SVDFILE)
@@ -75,10 +106,11 @@ fn main() {
     let out = &PathBuf::from(env::var_os("OUT_DIR").unwrap());
 
     // Patch content
-    let re = Regex::new(r#"#\s*!\s*\[\s*doc\s*=\s*"[^"]+"\s*]"#).unwrap();
-    let modified = re.replace(&generation.lib_rs, "");
+    //let re = Regex::new(r#"#\s*!\s*\[\s*doc\s*=\s*"[^"]+"\s*]"#).unwrap();
+    //let modified = re.replace(&generation.lib_rs, "");
     // Dump generation.lib_rs content
-    write_lib_rs(out.as_path(), &modified);
+    //write_lib_rs(out.as_path(), &modified);
+    write_lib_rs(out.as_path(), &generation.lib_rs);
 
     // Dump generation.device_specific.device_x content
     if let Some(device_specific) = &generation.device_specific {
