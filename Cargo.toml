@@ -21,6 +21,6 @@ categories = ["no-std", "embedded", "hardware-support"]
 keywords = ["no-std", "arm", "cortex-m", "atsam", "pac"]
 repository = "https://github.com/atsams-rs/atsamx7x-pac"
 edition = "2021"
-rust-version = "1.70.0"
+rust-version = "1.81.0"
 
 [workspace.dependencies]
